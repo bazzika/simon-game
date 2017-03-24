@@ -29,6 +29,27 @@ $(function() {
       playersequence = [],
       moveArr = ['g', 'r', 'b', 'y'];
 
+
+    function flashDisplay(str, num, callback) {
+      var count = 0;
+      display.text("");
+      displayInterval = setInterval(function() {
+        display.text(str);
+        if (count === num) {
+          clearInterval(displayInterval);
+          display.text("");
+          setTimeout(function() {
+            callback.apply();
+          }, 200)
+        } else {
+          setTimeout(function() {
+            display.text("");
+          }, 200);
+        }
+        count++;
+      }, 400);
+    }
+
     function displayRound() {
       display.text("");
       setTimeout(function() {
