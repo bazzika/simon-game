@@ -1,7 +1,7 @@
 $(function() {
 
   function SimonGame() {
-    var _this = this,
+    var current = this,
 
       display = $('.display'),
       inputs = $('.ss-input'),
@@ -29,6 +29,16 @@ $(function() {
       playersequence = [],
       moveArr = ['g', 'r', 'b', 'y'];
 
+    function displayRound() {
+      display.text("");
+      setTimeout(function() {
+        display.text("ROUND " + round);
+      }, 400);
+    }
 
   }
-})
+
+  var simon = new SimonGame;
+  simon.init(); // start new game
+});
+
