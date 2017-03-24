@@ -42,6 +42,40 @@ $(function() {
       }
     }
 
+    function playSeq(arr, time) {
+      var args = arguments;
+      var space;
+      var i = 0;
+      playLights = setInterval(function() {
+        switch (arr[i]) {
+          case "g":
+            space = green;
+            break;
+          case "r":
+            space = red;
+            break;
+          case "b":
+            space = blue;
+            break;
+          case "y":
+            space = yellow;
+            break;
+        }
+        pushButton(space);
+        setTimeout(function() {
+          clearButton(space);
+        }, time / 2);
+        i++;
+        if(i === arr.length){
+          if (args.length > 2) {
+            args[2].apply();
+          }
+          clearInterval(playLights);
+        }
+      }, time);
+    }
+
+
     function flashDisplay(str, num, callback) {
       var count = 0;
       display.text("");
