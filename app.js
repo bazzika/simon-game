@@ -224,7 +224,6 @@ $(function() {
       div.removeClass("active");
     }
 
-
     function flashDisplay(str, num, callback) {
       var count = 0;
       display.text("");
