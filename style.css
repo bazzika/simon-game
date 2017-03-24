@@ -31,7 +31,7 @@ body {
     }
 }
 
-.ss-game {
+.s-game {
     border-radius: 50%;
     border: 20px solid black;
     box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5), 0 25px 50px 0 rgba(0, 0, 0, 0.2);
@@ -44,24 +44,24 @@ body {
     background-color: grey;
 }
 @media (min-width: 500px) {
-    .ss-game {
+    .s-game {
         height: 400px;
         width: 400px;
     }
 }
 @media (min-width: 600px) {
-    .ss-game {
+    .s-game {
         height: 500px;
         width: 500px;
     }
 }
 @media (min-width: 700px) {
-    .ss-game {
+    .s-game {
         height: 600px;
         width: 600px;
     }
 }
-.ss-game .overlay {
+.s-game .overlay {
     background: -webkit-radial-gradient(center, #cccccc, #e5e5e5, #808080);
     background: radial-gradient(center, #cccccc, #e5e5e5, #808080);
     background-color: grey;
@@ -75,7 +75,7 @@ body {
     z-index: 10;
 }
 @media (min-width: 500px) {
-    .ss-game .overlay {
+    .s-game .overlay {
         border: 20px solid black;
         height: 180px;
         width: 180px;
@@ -84,7 +84,7 @@ body {
     }
 }
 @media (min-width: 600px) {
-    .ss-game .overlay {
+    .s-game .overlay {
         height: 230px;
         width: 230px;
         top: 115px;
@@ -92,14 +92,14 @@ body {
     }
 }
 @media (min-width: 700px) {
-    .ss-game .overlay {
+    .s-game .overlay {
         height: 280px;
         width: 280px;
         top: 140px;
         left: 140px;
     }
 }
-.ss-game .overlay .display {
+.s-game .overlay .display {
     font-family: "VT323", monospace;
     font-size: 1em;
     width: 70%;
@@ -113,51 +113,51 @@ body {
     text-align: center;
 }
 @media (min-width: 500px) {
-    .ss-game .overlay .display {
+    .s-game .overlay .display {
         font-size: 1.2em;
         min-height: 26px;
         margin-top: 25%;
     }
 }
 @media (min-width: 600px) {
-    .ss-game .overlay .display {
+    .s-game .overlay .display {
         font-size: 1.4em;
         min-height: 30px;
         margin-top: 25%;
     }
 }
 @media (min-width: 700px) {
-    .ss-game .overlay .display {
+    .s-game .overlay .display {
         font-size: 1.6em;
         min-height: 34px;
         margin-top: 25%;
     }
 }
-.ss-game .overlay .strict, .ss-game .overlay .start-reset {
+.s-game .overlay .strict, .ss-game .overlay .start-reset {
     font-family: "Russo One", sans-serif;
     font-size: 0.7em;
     text-align: center;
     margin-top: 5px;
 }
 @media (min-width: 500px) {
-    .ss-game .overlay .strict, .ss-game .overlay .start-reset {
+    .s-game .overlay .strict, .ss-game .overlay .start-reset {
         margin-top: 8px;
         font-size: 1em;
     }
 }
 @media (min-width: 600px) {
-    .ss-game .overlay .strict, .ss-game .overlay .start-reset {
+    .s-game .overlay .strict, .ss-game .overlay .start-reset {
         margin-top: 10px;
         font-size: 1.2em;
     }
 }
 @media (min-width: 700px) {
-    .ss-game .overlay .strict, .ss-game .overlay .start-reset {
+    .s-game .overlay .strict, .ss-game .overlay .start-reset {
         margin-top: 20px;
         font-size: 1.4em;
     }
 }
-.ss-game .overlay .strict button {
+.s-game .overlay .strict button {
     height: 14px;
     width: 14px;
     border-radius: 50%;
@@ -165,45 +165,45 @@ body {
     background-color: red;
 }
 @media (min-width: 500px) {
-    .ss-game .overlay .strict button {
+    .s-game .overlay .strict button {
         height: 16px;
         width: 16px;
     }
 }
 @media (min-width: 700px) {
-    .ss-game .overlay .strict button {
+    .s-game .overlay .strict button {
         height: 20px;
         width: 20px;
     }
 }
-.ss-game .overlay .strict button.active {
+.s-game .overlay .strict button.active {
     background-color: #00FF00;
 }
-.ss-game .overlay .start-reset button {
+.s-game .overlay .start-reset button {
     border: 2px solid black;
     border-radius: 4px;
     background-color: #00FF00;
 }
-.ss-game .overlay .start-reset button.active {
+.s-game .overlay .start-reset button.active {
     background-color: yellow;
 }
-.ss-game .ss-input {
+.s-game .s-input {
     height: 50%;
     width: 50%;
     float: left;
     overflow: hidden;
     z-index: 1;
 }
-.ss-game .ss-input:hover {
+.s-game .s-input:hover {
     cursor: pointer;
 }
-.ss-game .ss-input.active {
+.s-game .s-input.active {
     cursor: pointer;
 }
-.ss-game .ss-input.active .ss-light {
+.s-game .s-input.active .s-light {
     background-color: rgba(255, 255, 255, 0.6);
 }
-.ss-game .ss-input .ss-light {
+.s-game .s-input .s-light {
     height: 100%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0);
@@ -211,7 +211,7 @@ body {
     transition: background-color 0.07s linear;
     z-index: 2;
 }
-.ss-game .ss-g {
+.s-game .s-green {
     background: -webkit-radial-gradient(bottom right, #b2d8b2, #008000, #b2d8b2);
     background: radial-gradient(bottom right, #b2d8b2, #008000, #b2d8b2);
     background-color: green;
@@ -219,7 +219,7 @@ body {
     border-bottom: 10px solid black;
     border-top-left-radius: 100%;
 }
-.ss-game .ss-r {
+.s-game .s-red {
     background: -webkit-radial-gradient(bottom left, #ffcccc, #ff0000, #ffcccc);
     background: radial-gradient(bottom left, #ffcccc, #ff0000, #ffcccc);
     background-color: red;
@@ -227,7 +227,7 @@ body {
     border-bottom: 10px solid black;
     border-top-right-radius: 100%;
 }
-.ss-game .ss-b {
+.s-game .s-blue {
     background: -webkit-radial-gradient(top right, #ccccff, #0000ff, #ccccff);
     background: radial-gradient(top right, #ccccff, #0000ff, #ccccff);
     background-color: blue;
@@ -235,7 +235,7 @@ body {
     border-top: 10px solid black;
     border-bottom-left-radius: 100%;
 }
-.ss-game .ss-y {
+.s-game .s-yellow {
     background: -webkit-radial-gradient(top left, #ffffcc, #f5f50a, #ffffcc);
     background: radial-gradient(top left, #ffffcc, #f5f50a, #ffffcc);
     background-color: #f5f50a;

@@ -4,13 +4,13 @@ $(function() {
     var current = this,
 
       display = $('.display'),
-      inputs = $('.ss-input'),
+      inputs = $('.s-input'),
       startButton = $('.start-reset button'),
       strictLight = $('.strict button'),
-      green = $('.ss-g'),
-      red = $('.ss-r'),
-      blue = $('.ss-b'),
-      yellow = $('.ss-y'),
+      green = $('.s-green'),
+      red = $('.s-red'),
+      blue = $('.s-blue'),
+      yellow = $('.s-yellow'),
 
       greenAudio = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"),
       redAudio = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"),
@@ -27,7 +27,7 @@ $(function() {
       playerTurn = false,
       sequence = [],
       playersequence = [],
-      moveArr = ['g', 'r', 'b', 'y'];
+      moveArr = ['green', 'red', 'blue', 'yellow'];
 
     this.init = function() {
       clearInterval(playLights);
@@ -51,10 +51,10 @@ $(function() {
         if (running && playerTurn && pressAllowed) {
           var button;
           pressAllowed = false;
-          if ($(this).hasClass('ss-g')) button = green;
-          if ($(this).hasClass('ss-b')) button = blue;
-          if ($(this).hasClass('ss-r')) button = red;
-          if ($(this).hasClass('ss-y')) button = yellow;
+          if ($(this).hasClass('s-green')) button = green;
+          if ($(this).hasClass('s-blue')) button = blue;
+          if ($(this).hasClass('s-red')) button = red;
+          if ($(this).hasClass('s-yellow')) button = yellow;
           pushButton(button);
           processUserInput(button);
           setTimeout(function() {
@@ -159,16 +159,16 @@ $(function() {
       var i = 0;
       playLights = setInterval(function() {
         switch (arr[i]) {
-          case "g":
+          case "green":
             space = green;
             break;
-          case "r":
+          case "red":
             space = red;
             break;
-          case "b":
+          case "blue":
             space = blue;
             break;
-          case "y":
+          case "yellow":
             space = yellow;
             break;
         }
