@@ -30,6 +30,18 @@ $(function() {
       moveArr = ['g', 'r', 'b', 'y'];
 
 
+    function setStrictMode() {
+      if (!running) {
+        if (strictMode) {
+          strictMode = false;
+          strictLight.removeClass('active');
+        } else {
+          strictMode = true;
+          strictLight.addClass('active');
+        }
+      }
+    }
+
     function flashDisplay(str, num, callback) {
       var count = 0;
       display.text("");
