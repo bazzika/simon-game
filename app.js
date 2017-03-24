@@ -65,6 +65,17 @@ $(function() {
       });
     }
 
+    function toggleGame() {
+      if (running) {
+        current.init();
+      } else {
+        running = true;
+        playerTurn = false;
+        startButton.addClass('active');
+        startButton.text('RESET');
+        processCompTurn();
+      }
+    }
 
 
     function setStrictMode() {
