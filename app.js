@@ -29,6 +29,43 @@ $(function() {
       playersequence = [],
       moveArr = ['g', 'r', 'b', 'y'];
 
+    this.init = function() {
+      clearInterval(playLights);
+      clearInterval(displayInterval);
+      inputs.off();
+      strictLight.off();
+      startButton.off();
+      inputs.removeClass('active');
+      if (startButton.hasClass('active')) startButton.removeClass('active');
+      if (startButton.text() !== 'START') startButton.text('START');
+      playerTurn = false;
+      pressAllowed = true;
+      running = false;
+      round = 0;
+      time = 1000;
+      sequence = [];
+      playersequence = [];
+      strictLight.on("click", setStrictMode);
+      startButton.on("click", toggleGame);
+      inputs.on("click", function() {
+        if (running && playerTurn && pressAllowed) {
+          var button;
+          pressAllowed = false;
+          if ($(this).hasClass('ss-g')) button = green;
+          if ($(this).hasClass('ss-b')) button = blue;
+          if ($(this).hasClass('ss-r')) button = red;
+          if ($(this).hasClass('ss-y')) button = yellow;
+          pushButton(button);
+          processUserInput(button);
+          setTimeout(function() {
+            clearButton(button);
+            pressAllowed = true;
+          }, 400);
+        }
+      });
+    }
+
+
 
     function setStrictMode() {
       if (!running) {
