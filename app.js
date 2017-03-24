@@ -102,7 +102,44 @@ $(function() {
         }, 1000);
       }
     }
-
+    function processUserInput(div) {
+      if (running && playerTurn && round < 21) {
+        var str = div.attr('class').split(' ')[1].split('-')[1];
+        if (playersequence.length < sequence.length) {
+          playersequence.push(str);
+          if (playersequence[playersequence.length - 1] === sequence[playersequence.length - 1]) {
+            if (playersequence.length === sequence.length) {
+              playerTurn = false;
+              if (round === 20) {
+                flashDisplay("WINNER!", 5, function() {
+                  current.init();
+                  toggleGame();
+                });
+              } else {
+                playersequence = [];
+                processCompTurn();
+              }
+            }
+          } else {
+            if (strictMode) {
+              flashDisplay("!!!", 3, function() {
+                current.init();
+                toggleGame();
+              });
+            } else {
+              playerTurn = false;
+              playersequence = [];
+              flashDisplay("!!!", 3, displayRound);
+              setTimeout(function() {
+                playSeq(sequence, time, function() {
+                  playerTurn = true;
+                });
+              }, 1600);
+            }
+          }
+        }
+      }
+    }
 
     function setStrictMode() {
       if (!running) {
