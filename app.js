@@ -85,6 +85,15 @@ $(function() {
         } else {
           displayRound();
         }
+        if (round < 6) {
+          time = 1000;
+        } else if (round < 11) {
+          time = 900;
+        } else if (round < 16) {
+          time = 750;
+        } else {
+          time = 600;
+        }
         sequence.push(moveArr[Math.floor(Math.random()*4)]);
         setTimeout(function() {
           playSeq(sequence, time, function() {
