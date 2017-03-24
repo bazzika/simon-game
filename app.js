@@ -74,6 +74,44 @@ $(function() {
         }
       }, time);
     }
+    function pushButton(div) {
+      switch (div) {
+        case green:
+          greenAudio.play();
+          break;
+        case blue:
+          blueAudio.play();
+          break;
+        case red:
+          redAudio.play();
+          break;
+        case yellow:
+          yellowAudio.play();
+          break;
+      }
+      div.addClass("active");
+    }
+      function clearButton(div) {
+      switch (div) {
+        case green:
+          greenAudio.pause();
+          greenAudio.currentTime = 0;
+          break;
+        case blue:
+          blueAudio.pause();
+          blueAudio.currentTime = 0;
+          break;
+        case red:
+          redAudio.pause();
+          redAudio.currentTime = 0;
+          break;
+        case yellow:
+          yellowAudio.pause();
+          yellowAudio.currentTime = 0;
+          break;
+      }
+      div.removeClass("active");
+    }
 
 
     function flashDisplay(str, num, callback) {
