@@ -77,6 +77,23 @@ $(function() {
       }
     }
 
+    function processCompTurn() {
+      if (running && !playerTurn && round < 21) {
+        round++;
+        if (round === 1) {
+          flashDisplay("GET READY",3, displayRound);
+        } else {
+          displayRound();
+        }
+        sequence.push(moveArr[Math.floor(Math.random()*4)]);
+        setTimeout(function() {
+          playSeq(sequence, time, function() {
+            playerTurn = true;
+          });
+        }, 1000);
+      }
+    }
+
 
     function setStrictMode() {
       if (!running) {
