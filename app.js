@@ -29,3 +29,5 @@ $(function() {
       playersequence = [],
       moveArr = ['g', 'r', 'b', 'y'];
 
+
+  }
